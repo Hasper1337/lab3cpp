@@ -67,14 +67,14 @@ public:
 	 * \brief Виртуальная функция воспроизведение звука.
 	 * 
 	 */
-	void virtual play() const = 0;
+	void virtual play();
 
 
 	/**
 	 * \brief Виртуальная функция настройки инструмента.
 	 * 
 	 */
-	void tune() {
+	virtual void tune() {
 		cout << "Настройка инструмента:" << name << endl;
 	};
 
@@ -83,7 +83,7 @@ public:
 	 * 
 	 * \return Строка с типом инструмента
 	 */
-	virtual string getType() const = 0;
+	virtual string getType();
 
 	/**
 	 * \brief Получить общее количество созданных инструментов.
@@ -115,13 +115,75 @@ int MusicalInstrument::totalInstruments = 0;
  * \brief Класс наследник от MusicalInstrument, c методам strings, tension
  */
 class StringInstrument : public MusicalInstrument {
-	void strings() { // струны
+protected:
+	int numberOfStrings;
+	double tension;
+	string* stringMaterials;
+public:
+	/**
+	 * \brief Конструктор с параметрами
+	 * \param name Название инструмента
+	 * \param year Год изготовления
+	 * \param strings Количество струн
+	 * \param tension Натяжение струн
+	 */
+	StringInstrument(const string& name, int year, int strings, double tension) : MusicalInstrument(name, year), numberOfStrings(strings), tension(tension) {
+		stringMaterials = new string[numberOfStrings];
+		for (int i = 0; i < numberOfStrings; i++) {
+			stringMaterials[i] = "Steel";
+		}
+	}
 
-	};
 
-	void tension() { // натяжение
+	/**
+	 * \brief Конструктор копирования с глубоким копированием
+	 * \param other Копируемый объект
+	 *
+	 * Выполняет глубокое копирование динамического массива stringMaterials
+	 */
+	StringInstrument(const StringInstrument& other) : MusicalInstrument(other), numberOfStrings(other.numberOfStrings), tension(other.tension) {
+		stringMaterials = new string[numberOfStrings];
+		for (int i = 0; i < numberOfStrings; i++) {
+			stringMaterials[i] = other.stringMaterials[i];
+		};
+	}
 
-	};
+	/**
+	 * @brief Виртуальный деструктор
+	 *
+	 * Освобождает динамически выделенную память
+	 */
+	virtual ~StringInstrument() {
+		delete[] stringMaterials;
+	}
+
+	/**
+	 * \brief Переопределённая функция настройки струнного инструмента.
+	 * 
+	 */
+	void tune() override {
+		MusicalInstrument::tune();
+		cout << "Натяжение струн: " << tension << endl;
+	}
+
+
+	/**
+	 * \brief Получить количество струн
+	 * \return Количество струн
+	 */
+	int getNumberOfStrings() const { return numberOfStrings; }
+
+	/**
+	 * \brief Получить натяжение струн
+	 * \return Натяжение струн
+	 */
+	double getTension() const { return tension; }
+
+	/**
+	 * \brief Установить натяжение струн
+	 * \param t Новое значение натяжения
+	 */
+	void setTension(double t) { tension = t; }
 };
 
 /**
