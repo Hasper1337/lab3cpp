@@ -10,18 +10,28 @@
  *********************************************************************/
 
 #include <iostream>
+#include <string>
+#include <map>
 
 using namespace std;
 
 
 /**
- * \brief Абстрактный базовый класс, c методам play (виртуальный), tune и getType
+ * \brief Абстрактный базовый класс, c методам play, tune и getType
  */
 class MusicalInstrument {
 protected:
 	string name;
 	int yearMade;
 	static int totalInstruments;
+	static map<string, int> playCountByType;
+
+	/**
+	 * \brief Увеличить счётчик воспроизведений для типа инструмента
+	 * \param type Тип инструмента
+	 */
+	void incrementPlayCount(const string& type) const { playCountByType[type]++; }
+
 public:
 
 	/**
@@ -90,8 +100,26 @@ public:
 	 * 
 	 * \return Количество инструментов
 	 */
-	static int getTotalInstruments() {
-		return totalInstruments;
+	static int getTotalInstruments() { return totalInstruments; }
+
+
+	/**
+	 * \brief Получить самый популярный тип инструмента
+	 * 
+	 * \return Строка с типом инструмента и количеством воспроизведений
+	 */
+	static string getMostPlayedType() {
+		if (playCountByType.empty()) return "Нет данных";
+
+		string maxType;
+		int maxCount = 0;
+		for (const auto& pair : playCountByType) {
+			if (pair.second > maxCount) {
+				maxCount = pair.second;
+				maxType = pair.first;
+			}
+		}
+		return maxType + " (" + to_string(maxCount) + " раз)";
 	}
 
 	/**
@@ -109,10 +137,12 @@ public:
 
 };
 
+
 int MusicalInstrument::totalInstruments = 0;
+map<string, int> MusicalInstrument::playCountByType;
 
 /**
- * \brief Класс наследник от MusicalInstrument, c методам strings, tension
+ * \brief Промежуточный класс для струнных инструментов, класс наследник от MusicalInstrument, c методам strings, tension
  */
 class StringInstrument : public MusicalInstrument {
 protected:
@@ -120,6 +150,7 @@ protected:
 	double tension;
 	string* stringMaterials;
 public:
+
 	/**
 	 * \brief Конструктор с параметрами
 	 * \param name Название инструмента
@@ -133,7 +164,6 @@ public:
 			stringMaterials[i] = "Steel";
 		}
 	}
-
 
 	/**
 	 * \brief Конструктор копирования с глубоким копированием
@@ -187,16 +217,37 @@ public:
 };
 
 /**
- * \brief Класс наследник от MusicalInstrument, c методам diaphragm, material
+ * \brief Промежуточный класс для духовых инструментов, класс наследник от MusicalInstrument
  */
 class WindInstrument : public MusicalInstrument {
-	void diaphragm() { // диафрагма
+protected:
+	string material;
+	double airPressure;
+public:
 
-	};
-	
-	void material() { // материал
+	/**
+	 * \brief Конструктор с параметрами
+	 * \param name Название инструмента
+	 * \param year Год изготовления
+	 * \param material Материал изготовления
+	 */
+	WindInstrument(const string& name, int year, const string& material)
+		: MusicalInstrument(name, year), material(material), airPressure(1.0) {
+	}
 
-	};
+	/**
+	 * \brief Переопределённая функция tune() для настройки духового инструмента
+	 */
+	void tune() override {
+		MusicalInstrument::tune();
+		cout << "Давление воздуха: " << airPressure << endl;
+	}
+
+	/**
+	 * \brief Установить давление воздуха
+	 * \param pressure Новое значение давления
+	 */
+	void setAirPressure(double pressure) { airPressure = pressure; }
 };
 
 /**
@@ -204,10 +255,38 @@ class WindInstrument : public MusicalInstrument {
  */
 class Guitar : public StringInstrument {
 	public:
+	
+    /**
+     * \brief Конструктор гитары
+     * \param name Название гитары
+     * \param year Год изготовления
+	 * \param strings Количество струн
+	 * \param tension Натяжение струн
+     */
+    Guitar(const string& name, int year, int strings, double tension) : StringInstrument(name, year, strings, tension) {}
+    
+	/**
+     * \brief Воспроизведение звука гитары
+     */
 	void play() override {
-		cout << "Guitar sound like Strum Strum" << endl;
+		incrementPlayCount(getType());
+		cout << "Guitar sound like: Strum Strum... ♪" << endl;
 	};
 
+
+	/**
+	 * \brief Получить тип инструмента
+	 * \return Строка "Guitar"
+	 */
+	string getType() override { return "Guitar"; }
+
+	/**
+	 * \brief Настройка гитары
+	 */
+	void tune() override {
+		StringInstrument::tune();
+		cout << "Гитара настроена в E-A-D-G-B-E" << endl;
+	}
 };
 
 /**
