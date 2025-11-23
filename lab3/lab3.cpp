@@ -93,7 +93,7 @@ public:
 	 * 
 	 * \return Строка с типом инструмента
 	 */
-	virtual string getType();
+	virtual string getType() const;
 
 	/**
 	 * \brief Получить общее количество созданных инструментов.
@@ -270,7 +270,7 @@ class Guitar : public StringInstrument {
      */
 	void play() override {
 		incrementPlayCount(getType());
-		cout << "Guitar sound like: Strum Strum... ♪" << endl;
+		cout << "Guitar " << name << "sound like: Strum Strum... ♪" << endl;
 	};
 
 
@@ -278,14 +278,14 @@ class Guitar : public StringInstrument {
 	 * \brief Получить тип инструмента
 	 * \return Строка "Guitar"
 	 */
-	string getType() override { return "Guitar"; }
+	string getType() const override { return "Guitar"; }
 
 	/**
 	 * \brief Настройка гитары
 	 */
 	void tune() override {
 		StringInstrument::tune();
-		cout << "Гитара настроена в E-A-D-G-B-E" << endl;
+		cout << "The guitar is tuned in E-A-D-G-B-E" << endl;
 	}
 };
 
@@ -293,39 +293,151 @@ class Guitar : public StringInstrument {
  * \brief Класс наследник от StringInstrument
  */
 class Violin : public StringInstrument {
-	public:
+public:
+
+	 /**
+     * \brief Конструктор скрипки
+	 * \param name Название скрипки
+     * \param year Год изготовления
+	 * \param strings Количество струн
+	 * \param tension Натяжение струн
+     */
+	Violin(const string& name, int year, int strings, double tension) : StringInstrument(name, year, strings, tension) {}
+	
+
+	/**
+	 * \brief Воспроизведение звука скрипки
+	 */
 	void play() override {
-		cout << "Violin sound like Screech Screech" << endl;
+		incrementPlayCount(getType());
+		cout << "Violin " << name << "sound like: Strum Strum... ♪" << endl;
 	};
 
+
+	/**
+	 * \brief Получить тип инструмента
+	 * \return Строка "Violin"
+	 */
+	string getType() const override { return "Violin"; }
 };
 
 /**
  * \brief Класс наследник от WindInstrument
  */
 class Flute : public WindInstrument {
-	public:
+public:
+
+    /**
+     * \brief Конструктор флейты
+     * \param name Название флейты
+     * \param year Год изготовления
+     */
+    Flute(const string& name, int year, const string& material) : WindInstrument(name, year, material) {}
+
+	/**
+	 * \brief Воспроизведение звука скрипки
+	 */
 	void play() override {
-		cout << "Flute sound like Toot Toot" << endl;
+		incrementPlayCount(getType());
+		cout << "Flute" << name <<  "sound like Toot Toot" << endl;
 	};
 
+
+	/**
+	 * \brief Получить тип инструмента
+	 * \return Строка "Flute"
+	 */
+	string getType() const override { return "Flute"; }
 };
 
+/**
+ * \brief Класс интерфейс для электронных устройств
+ */
 class IElectronicDevice {
-	public:
-	void powerOn() {
-	};
-	void powerOff() {
-	};
+protected:
+	bool powerOn;
+	int currentPatch;
+
+public:
+
+	/**
+	 * \brief Конструктор по умолчанию
+	 */
+	IElectronicDevice() : powerOn(false), currentPatch(0) {}
+
+
+	/**
+	 * \brief Включить устройство
+	 */
+	void powerOnDevice() {
+		powerOn = true;
+		cout << "Device is turned on" << endl;
+	}
+
+	/**
+	 * \brief Установить патч (пресет)
+	 * \param patch Номер патча
+	 */
+	void setPatch(int patch) {
+		currentPatch = patch;
+		cout << "Patch #" << patch << " set" << endl;
+	}
+
+	/**
+	 * \brief Проверить, включено ли устройство
+	 * \return true если включено, false если выключено
+	 */
+	bool isPoweredOn() const { return powerOn; }
 };
 
 /**
  * \brief Класс наследник от Guitar и IElectronicDevice
  */
 class SynthGuitar : public Guitar, public IElectronicDevice {
+public:
 
+	/**
+	 * \brief Конструктор синтезаторной гитары
+	 * \param name Название инструмента
+	 * \param year Год изготовления
+	 */
+	SynthGuitar(const string& name, int year) : Guitar(name, year, 0, 0) {}
+
+
+	/**
+	 * \brief Воспроизведение звука синтезаторной гитары
+	 *
+	 * Работает только при включенном питании
+	 */
+	void play() override {
+		incrementPlayCount(getType());
+		if (powerOn) {
+			cout << "SynthGuitar " << name << " (patch #" << currentPatch
+				<< "): Electronic sound ... ♪♫" << endl;
+		}
+		else {
+			cout << "The synth guitar is turned off!" << endl;
+		}
+	}
+
+	/**
+	 * \brief Получить тип инструмента
+	 * \return Строка "SynthGuitar"
+	 */
+	string getType() const override { return "SynthGuitar"; }
+
+	/**
+	 * \brief Настройка синтезаторной гитары
+	 *
+	 * Требует включенного питания для электронной калибровки
+	 */
+	void tune() override {
+		if (powerOn) {
+			Guitar::tune();
+			cout << "Synth guitar calibration is complete." << endl;
+		}
+		else {
+			cout << "Turn on the power to configure" << endl;
+		}
+	}
 };
-
-int main() {
-
-}
