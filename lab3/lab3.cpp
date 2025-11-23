@@ -248,6 +248,8 @@ public:
 	 * \param pressure Новое значение давления
 	 */
 	void setAirPressure(double pressure) { airPressure = pressure; }
+
+	void setMaterial(const string& mat) { material = mat; }
 };
 
 /**
@@ -263,14 +265,14 @@ class Guitar : public StringInstrument {
 	 * \param strings Количество струн
 	 * \param tension Натяжение струн
      */
-    Guitar(const string& name, int year, int strings, double tension) : StringInstrument(name, year, strings, tension) {}
+    Guitar(const string& name, int year) : StringInstrument(name, year, 6, 1.0) {}
     
 	/**
      * \brief Воспроизведение звука гитары
      */
 	void play() override {
 		incrementPlayCount(getType());
-		cout << "Guitar " << name << "sound like: Strum Strum... ♪" << endl;
+		cout << "Guitar " << name <<"sound like: Strum Strum... ♪" << endl;
 	};
 
 
@@ -302,7 +304,7 @@ public:
 	 * \param strings Количество струн
 	 * \param tension Натяжение струн
      */
-	Violin(const string& name, int year, int strings, double tension) : StringInstrument(name, year, strings, tension) {}
+	Violin(const string& name, int year) : StringInstrument(name, year, 4, 8.0) {}
 	
 
 	/**
@@ -332,7 +334,7 @@ public:
      * \param name Название флейты
      * \param year Год изготовления
      */
-    Flute(const string& name, int year, const string& material) : WindInstrument(name, year, material) {}
+	Flute(const string& name, int year) : WindInstrument(name, year, "Wood") {}
 
 	/**
 	 * \brief Воспроизведение звука скрипки
@@ -401,7 +403,7 @@ public:
 	 * \param name Название инструмента
 	 * \param year Год изготовления
 	 */
-	SynthGuitar(const string& name, int year) : Guitar(name, year, 0, 0) {}
+	SynthGuitar(const string& name, int year) : Guitar(name, year) {}
 
 
 	/**
@@ -412,8 +414,7 @@ public:
 	void play() override {
 		incrementPlayCount(getType());
 		if (powerOn) {
-			cout << "SynthGuitar " << name << " (patch #" << currentPatch
-				<< "): Electronic sound ... ♪♫" << endl;
+			cout << "SynthGuitar " << name << " (patch #" << currentPatch << "): Electronic sound ... ♪♫" << endl;
 		}
 		else {
 			cout << "The synth guitar is turned off!" << endl;
