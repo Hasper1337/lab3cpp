@@ -6,8 +6,10 @@
  * \date   November 2025
  *********************************************************************/
 
-#include "lab3.cpp"
+#include "lab3.h"
 
+int MusicalInstrument::totalInstruments = 0;
+map<string, int> MusicalInstrument::playCountByType;
 
 /**
  * \brief Тест 1: Создание объектов всех типов
@@ -24,6 +26,16 @@ void test1() {
     SynthGuitar synth("Roland", 2023);
     
     cout << "Создано инструментов: " << MusicalInstrument::getTotalInstruments() << endl;
+    
+    // Воспроизведем звук каждого инструмента
+    cout << "\nВоспроизведение звуков:" << endl;
+    guitar.play();
+    violin.play();
+    flute.play();
+    
+    synth.powerOnDevice();
+    synth.play();
+    
     cout << string(50, '=') << endl;
 }
 
@@ -36,8 +48,19 @@ void test1() {
  */
 void test3() {
     cout << "\nТЕСТ 3: Статические члены и функции" << endl;
+    
+    // Создаём новые инструменты для этого теста
+    Guitar guitar1("Gibson", 2021);
+    Guitar guitar2("Ibanez", 2022);
+    Violin violin("Yamaha", 2019);
+    
+    // Играем несколько раз
+    guitar1.play();
+    guitar1.play();
+    guitar2.play();
+    violin.play();
 
-    cout << "Всего инструментов: " << MusicalInstrument::getTotalInstruments() << endl;
+    cout << "\nВсего инструментов: " << MusicalInstrument::getTotalInstruments() << endl;
     cout << "Самый популярный: " << MusicalInstrument::getMostPlayedType() << endl;
     cout << string(50, '=') << endl;
 }
@@ -59,6 +82,7 @@ void test4() {
     copy.setTension(8.0);
     cout << "Copy have tension: " << copy.getTension() << endl;
     cout << "Original after edit copy: " << original.getTension() << endl;
+    cout << string(50, '=') << endl;
 }
 
 
@@ -90,6 +114,11 @@ void test5() {
     IElectronicDevice* devicePtr = &synth;
     devicePtr->setPatch(99);
     cout << "   Текущий патч: " << (devicePtr->isPoweredOn() ? "активен" : "неактивен") << endl;
+    
+    cout << "\n5. Проверка после изменения патча:" << endl;
+    synth.play();
+    
+    cout << string(50, '=') << endl;
 }
 
 int main() {
@@ -97,5 +126,10 @@ int main() {
     test3();
     test4();
     test5();
+    
+    cout << "\nИтоговая статистика:" << endl;
+    cout << "Всего создано инструментов: " << MusicalInstrument::getTotalInstruments() << endl;
+    cout << "Самый популярный инструмент: " << MusicalInstrument::getMostPlayedType() << endl;
+    
     return 0;
 }

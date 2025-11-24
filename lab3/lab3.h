@@ -9,6 +9,9 @@
  * множественное наследование
  *********************************************************************/
 
+#ifndef LAB_3_H
+#define LAB_3_H
+
 #include <iostream>
 #include <string>
 #include <map>
@@ -74,10 +77,10 @@ public:
 		return *this;
 	}
 	/**
-	 * \brief Виртуальная функция воспроизведение звука.
+	 * \brief Чисто виртуальная функция воспроизведение звука.
 	 * 
 	 */
-	void virtual play();
+	virtual void play() = 0;
 
 
 	/**
@@ -86,14 +89,14 @@ public:
 	 */
 	virtual void tune() {
 		cout << "Настройка инструмента:" << name << endl;
-	};
+	}
 
 	/**
-	 * \brief Виртуальная функция получения типа инструмента.
+	 * \brief Чисто виртуальная функция получения типа инструмента.
 	 * 
 	 * \return Строка с типом инструмента
 	 */
-	virtual string getType() const;
+	virtual string getType() const = 0;
 
 	/**
 	 * \brief Получить общее количество созданных инструментов.
@@ -138,8 +141,6 @@ public:
 };
 
 
-int MusicalInstrument::totalInstruments = 0;
-map<string, int> MusicalInstrument::playCountByType;
 
 /**
  * \brief Промежуточный класс для струнных инструментов, класс наследник от MusicalInstrument, c методам strings, tension
@@ -175,7 +176,7 @@ public:
 		stringMaterials = new string[numberOfStrings];
 		for (int i = 0; i < numberOfStrings; i++) {
 			stringMaterials[i] = other.stringMaterials[i];
-		};
+		}
 	}
 
 	/**
@@ -272,8 +273,8 @@ class Guitar : public StringInstrument {
      */
 	void play() override {
 		incrementPlayCount(getType());
-		cout << "Guitar " << name <<"sound like: Strum Strum... ♪" << endl;
-	};
+		cout << "Guitar " << name << " sound like: Strum Strum... ♪" << endl;
+	}
 
 
 	/**
@@ -312,8 +313,8 @@ public:
 	 */
 	void play() override {
 		incrementPlayCount(getType());
-		cout << "Violin " << name << "sound like: Strum Strum... ♪" << endl;
-	};
+		cout << "Violin " << name << " sound like: Strum Strum... ♪" << endl;
+	}
 
 
 	/**
@@ -341,8 +342,8 @@ public:
 	 */
 	void play() override {
 		incrementPlayCount(getType());
-		cout << "Flute" << name <<  "sound like Toot Toot" << endl;
-	};
+		cout << "Flute " << name << " sound like Toot Toot" << endl;
+	}
 
 
 	/**
@@ -442,3 +443,5 @@ public:
 		}
 	}
 };
+
+#endif // LAB_3_H
