@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include <map>
 
 using namespace std;
@@ -112,7 +113,7 @@ public:
 	 * \return Строка с типом инструмента и количеством воспроизведений
 	 */
 	static string getMostPlayedType() {
-		if (playCountByType.empty()) return "Нет данных";
+		if (playCountByType.empty()) return "No data";
 
 		string maxType;
 		int maxCount = 0;
@@ -122,7 +123,7 @@ public:
 				maxType = pair.first;
 			}
 		}
-		return maxType + " (" + to_string(maxCount) + " раз)";
+		return maxType + " (" + to_string(maxCount) + " times)";
 	}
 
 	/**
@@ -273,7 +274,7 @@ class Guitar : public StringInstrument {
      */
 	void play() override {
 		incrementPlayCount(getType());
-		cout << "Guitar " << name << " sound like: Strum Strum... ♪" << endl;
+		cout << "Guitar " << name << " sound like: Strum Strum..." << endl;
 	}
 
 
@@ -313,7 +314,7 @@ public:
 	 */
 	void play() override {
 		incrementPlayCount(getType());
-		cout << "Violin " << name << " sound like: Strum Strum... ♪" << endl;
+		cout << "Violin " << name << " sound like: Strum Strum..." << endl;
 	}
 
 
@@ -342,7 +343,7 @@ public:
 	 */
 	void play() override {
 		incrementPlayCount(getType());
-		cout << "Flute " << name << " sound like Toot Toot" << endl;
+		cout << "Flute " << name << " sound like Toot Toot..." << endl;
 	}
 
 
@@ -415,7 +416,7 @@ public:
 	void play() override {
 		incrementPlayCount(getType());
 		if (powerOn) {
-			cout << "SynthGuitar " << name << " (patch #" << currentPatch << "): Electronic sound ... ♪♫" << endl;
+			cout << "SynthGuitar " << name << " (patch #" << currentPatch << "): Electronic sound..." << endl;
 		}
 		else {
 			cout << "The synth guitar is turned off!" << endl;
