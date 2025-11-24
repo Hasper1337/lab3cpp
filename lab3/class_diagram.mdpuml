@@ -1,0 +1,77 @@
+﻿@startuml
+skinparam classAttributeIconSize 0
+
+abstract class MusicalInstrument {
+  # name : string
+  # yearMade : int
+  - {static} totalInstruments : int
+  - {static} playCountByType : map
+  __
+  + {abstract} play()
+  + {abstract} getType()
+  + tune()
+  + {static} getTotalInstruments()
+  + {static} getMostPlayedType()
+}
+
+class StringInstrument {
+  # numberOfStrings : int
+  # tension : double
+  # stringMaterials : string*
+  __
+  + tune()
+  + getTension()
+  + setTension()
+}
+
+class WindInstrument {
+  # material : string
+  # airPressure : double
+  __
+  + tune()
+  + setAirPressure()
+}
+
+class Guitar {
+  + play()
+  + getType()
+  + tune()
+}
+
+class Violin {
+  + play()
+  + getType()
+}
+
+class Flute {
+  + play()
+  + getType()
+}
+
+interface IElectronicDevice {
+  # powerOn : bool
+  # currentPatch : int
+  __
+  + powerOnDevice()
+  + setPatch()
+  + isPoweredOn()
+}
+
+class SynthGuitar {
+  + play()
+  + getType()
+  + tune()
+}
+
+MusicalInstrument <|-- StringInstrument
+MusicalInstrument <|-- WindInstrument
+
+StringInstrument <|-- Guitar
+StringInstrument <|-- Violin
+StringInstrument <|-- SynthGuitar
+
+WindInstrument <|-- Flute
+
+IElectronicDevice <|.. SynthGuitar
+
+@enduml

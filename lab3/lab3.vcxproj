@@ -126,6 +126,9 @@
     <ClCompile Include="lab3.h" />
     <ClCompile Include="tests.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="class_diagram.mdpuml" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
