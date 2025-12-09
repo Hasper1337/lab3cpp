@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторная работа №3 ООП: Исходный файл source/repos/lab3/lab3/lab3.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Лабораторная работа №3 ООП
+   </div>
+   <div id="projectbrief">Наследование</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('lab3_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lab3.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lab3_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************/</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef LAB_3_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define LAB_3_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_musical_instrument.html">   26</a></span><span class="keyword">class </span><a class="code hl_function" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">   28</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#a99b6b39f754308848014e62dbc705141">   29</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_musical_instrument.html#a99b6b39f754308848014e62dbc705141">yearMade</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#ace94ff57f651030ee16c714917c933af">   30</a></span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_musical_instrument.html#ace94ff57f651030ee16c714917c933af">totalInstruments</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#a39ae77f6e4fc48dfe1863c5d2d928cb9">   31</a></span>    <span class="keyword">static</span> map&lt;string, int&gt; <a class="code hl_variable" href="class_musical_instrument.html#a39ae77f6e4fc48dfe1863c5d2d928cb9">playCountByType</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#a228e61d21d052d0768085f09258bf051">   37</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_musical_instrument.html#a228e61d21d052d0768085f09258bf051">incrementPlayCount</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; type)<span class="keyword"> const </span>{ <a class="code hl_variable" href="class_musical_instrument.html#a39ae77f6e4fc48dfe1863c5d2d928cb9">playCountByType</a>[type]++; }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">   47</a></span>    <a class="code hl_function" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, <span class="keywordtype">int</span> year) : <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>(<a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>), <a class="code hl_variable" href="class_musical_instrument.html#a99b6b39f754308848014e62dbc705141">yearMade</a>(year) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_variable" href="class_musical_instrument.html#ace94ff57f651030ee16c714917c933af">totalInstruments</a>++;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#af8efbdce465077856ea4ba69f7084aad">   56</a></span>    <a class="code hl_function" href="class_musical_instrument.html#af8efbdce465077856ea4ba69f7084aad">MusicalInstrument</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a>&amp; other) : <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>(other.<a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>), <a class="code hl_variable" href="class_musical_instrument.html#a99b6b39f754308848014e62dbc705141">yearMade</a>(other.<a class="code hl_variable" href="class_musical_instrument.html#a99b6b39f754308848014e62dbc705141">yearMade</a>) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_variable" href="class_musical_instrument.html#ace94ff57f651030ee16c714917c933af">totalInstruments</a>++;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#aa861f8f998468ff03670d342e56477e4">   63</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_musical_instrument.html#aa861f8f998468ff03670d342e56477e4">~MusicalInstrument</a>() {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_variable" href="class_musical_instrument.html#ace94ff57f651030ee16c714917c933af">totalInstruments</a>--;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#a038403bf2445ca8e64bd9b27bb45b482">   73</a></span>    <a class="code hl_function" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a>&amp; <a class="code hl_function" href="class_musical_instrument.html#a038403bf2445ca8e64bd9b27bb45b482">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a>&amp; other) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> != &amp;other) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a> = other.<a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_variable" href="class_musical_instrument.html#a99b6b39f754308848014e62dbc705141">yearMade</a> = other.<a class="code hl_variable" href="class_musical_instrument.html#a99b6b39f754308848014e62dbc705141">yearMade</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#a65989e852e5f8139e9412c32905bc828">   84</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_musical_instrument.html#a65989e852e5f8139e9412c32905bc828">play</a>() = 0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#a98320f5601845aae46e87c3ffdea3466">   91</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_musical_instrument.html#a98320f5601845aae46e87c3ffdea3466">tune</a>() {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        cout &lt;&lt; <span class="stringliteral">&quot;Настройка инструмента:&quot;</span> &lt;&lt; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a> &lt;&lt; endl;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#ae11a00e958df8e0b1dde58a2a217216c">  100</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code hl_function" href="class_musical_instrument.html#ae11a00e958df8e0b1dde58a2a217216c">getType</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#a04b449d3491c28d36aff19a0e87b4add">  107</a></span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_musical_instrument.html#a04b449d3491c28d36aff19a0e87b4add">getTotalInstruments</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_musical_instrument.html#ace94ff57f651030ee16c714917c933af">totalInstruments</a>; }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#ac5cbe4068773ac217fd75225b0d8fa6f">  115</a></span>    <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="class_musical_instrument.html#ac5cbe4068773ac217fd75225b0d8fa6f">getMostPlayedType</a>() {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_musical_instrument.html#a39ae77f6e4fc48dfe1863c5d2d928cb9">playCountByType</a>.empty()) <span class="keywordflow">return</span> <span class="stringliteral">&quot;No data&quot;</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordtype">string</span> maxType;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordtype">int</span> maxCount = 0;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pair : <a class="code hl_variable" href="class_musical_instrument.html#a39ae77f6e4fc48dfe1863c5d2d928cb9">playCountByType</a>) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">if</span> (pair.second &gt; maxCount) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                maxCount = pair.second;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                maxType = pair.first;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">return</span> maxType + <span class="stringliteral">&quot; (&quot;</span> + to_string(maxCount) + <span class="stringliteral">&quot; times)&quot;</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#a329acd1693e8869d60ad9f77da6744ef">  134</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_musical_instrument.html#a329acd1693e8869d60ad9f77da6744ef">getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>; }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="class_musical_instrument.html#a05fc2dfcc99193948118dd770b78ef0f">  140</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_musical_instrument.html#a05fc2dfcc99193948118dd770b78ef0f">getYearMade</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_musical_instrument.html#a99b6b39f754308848014e62dbc705141">yearMade</a>; }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>};</div>
+</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span></div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="};">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_string_instrument.html">  149</a></span><span class="keyword">class </span><a class="code hl_function" href="class_string_instrument.html#ac920ad94577232f754806b8202c92ed8">StringInstrument</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a> {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">  151</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">numberOfStrings</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">  152</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">tension</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="class_string_instrument.html#a352bab0c7dee3b0662590b7fcf4b4fb8">  153</a></span>    <span class="keywordtype">string</span>* <a class="code hl_variable" href="class_string_instrument.html#a352bab0c7dee3b0662590b7fcf4b4fb8">stringMaterials</a>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span></div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="class_string_instrument.html#ac920ad94577232f754806b8202c92ed8">  163</a></span>    <a class="code hl_function" href="class_string_instrument.html#ac920ad94577232f754806b8202c92ed8">StringInstrument</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, <span class="keywordtype">int</span> year, <span class="keywordtype">int</span> strings, <span class="keywordtype">double</span> <a class="code hl_variable" href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">tension</a>) : <a class="code hl_function" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a>(<a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, year), <a class="code hl_variable" href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">numberOfStrings</a>(strings), <a class="code hl_variable" href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">tension</a>(<a class="code hl_variable" href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">tension</a>) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <a class="code hl_variable" href="class_string_instrument.html#a352bab0c7dee3b0662590b7fcf4b4fb8">stringMaterials</a> = <span class="keyword">new</span> <span class="keywordtype">string</span>[<a class="code hl_variable" href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">numberOfStrings</a>];</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">numberOfStrings</a>; i++) {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <a class="code hl_variable" href="class_string_instrument.html#a352bab0c7dee3b0662590b7fcf4b4fb8">stringMaterials</a>[i] = <span class="stringliteral">&quot;Steel&quot;</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
+</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span></div>
+<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="class_string_instrument.html#ac6be3eab7cbd90934e9da808e86df53b">  176</a></span>    <a class="code hl_function" href="class_string_instrument.html#ac6be3eab7cbd90934e9da808e86df53b">StringInstrument</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_string_instrument.html#ac920ad94577232f754806b8202c92ed8">StringInstrument</a>&amp; other) : <a class="code hl_function" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a>(other), <a class="code hl_variable" href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">numberOfStrings</a>(other.<a class="code hl_variable" href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">numberOfStrings</a>), <a class="code hl_variable" href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">tension</a>(other.<a class="code hl_variable" href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">tension</a>) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <a class="code hl_variable" href="class_string_instrument.html#a352bab0c7dee3b0662590b7fcf4b4fb8">stringMaterials</a> = <span class="keyword">new</span> <span class="keywordtype">string</span>[<a class="code hl_variable" href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">numberOfStrings</a>];</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">numberOfStrings</a>; i++) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <a class="code hl_variable" href="class_string_instrument.html#a352bab0c7dee3b0662590b7fcf4b4fb8">stringMaterials</a>[i] = other.<a class="code hl_variable" href="class_string_instrument.html#a352bab0c7dee3b0662590b7fcf4b4fb8">stringMaterials</a>[i];</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    }</div>
+</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span></div>
+<div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="class_string_instrument.html#ab88cd33f8e9ac6bc0d83161a7138c641">  188</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_string_instrument.html#ab88cd33f8e9ac6bc0d83161a7138c641">~StringInstrument</a>() {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keyword">delete</span>[] <a class="code hl_variable" href="class_string_instrument.html#a352bab0c7dee3b0662590b7fcf4b4fb8">stringMaterials</a>;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    }</div>
+</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span></div>
+<div class="foldopen" id="foldopen00196" data-start="{" data-end="}">
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="class_string_instrument.html#ab3e144b73ed33ddf3ebb380d1188843b">  196</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_string_instrument.html#ab3e144b73ed33ddf3ebb380d1188843b">tune</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <a class="code hl_function" href="class_musical_instrument.html#a98320f5601845aae46e87c3ffdea3466">MusicalInstrument::tune</a>();</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        cout &lt;&lt; <span class="stringliteral">&quot;Натяжение струн: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">tension</a> &lt;&lt; endl;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
+</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="class_string_instrument.html#a2768a3d65b1e291459f73146ded8534c">  206</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_string_instrument.html#a2768a3d65b1e291459f73146ded8534c">getNumberOfStrings</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">numberOfStrings</a>; }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="class_string_instrument.html#a2d96e2b7ad6c439e60da9d865fda73cb">  212</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_string_instrument.html#a2d96e2b7ad6c439e60da9d865fda73cb">getTension</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">tension</a>; }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="class_string_instrument.html#aca3a7966265f313755d50e9d95c4995c">  218</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_string_instrument.html#aca3a7966265f313755d50e9d95c4995c">setTension</a>(<span class="keywordtype">double</span> t) { <a class="code hl_variable" href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">tension</a> = t; }</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>};</div>
+</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span></div>
+<div class="foldopen" id="foldopen00224" data-start="{" data-end="};">
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="class_wind_instrument.html">  224</a></span><span class="keyword">class </span><a class="code hl_function" href="class_wind_instrument.html#a42edaadbf674323e4ad7349a10761999">WindInstrument</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a> {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="class_wind_instrument.html#a030df246dabc346792d54b461c8402e6">  226</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_wind_instrument.html#a030df246dabc346792d54b461c8402e6">material</a>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="class_wind_instrument.html#a720dce928ec63face1bf2d1f03c1f450">  227</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_wind_instrument.html#a720dce928ec63face1bf2d1f03c1f450">airPressure</a>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span></div>
+<div class="foldopen" id="foldopen00236" data-start="{" data-end="}">
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="class_wind_instrument.html#a42edaadbf674323e4ad7349a10761999">  236</a></span>    <a class="code hl_function" href="class_wind_instrument.html#a42edaadbf674323e4ad7349a10761999">WindInstrument</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, <span class="keywordtype">int</span> year, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code hl_variable" href="class_wind_instrument.html#a030df246dabc346792d54b461c8402e6">material</a>)</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        : <a class="code hl_function" href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a>(<a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, year), <a class="code hl_variable" href="class_wind_instrument.html#a030df246dabc346792d54b461c8402e6">material</a>(<a class="code hl_variable" href="class_wind_instrument.html#a030df246dabc346792d54b461c8402e6">material</a>), <a class="code hl_variable" href="class_wind_instrument.html#a720dce928ec63face1bf2d1f03c1f450">airPressure</a>(1.0) {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    }</div>
+</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span></div>
+<div class="foldopen" id="foldopen00243" data-start="{" data-end="}">
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="class_wind_instrument.html#a79e3855a4ae81e784398ae5dbd575447">  243</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_wind_instrument.html#a79e3855a4ae81e784398ae5dbd575447">tune</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <a class="code hl_function" href="class_musical_instrument.html#a98320f5601845aae46e87c3ffdea3466">MusicalInstrument::tune</a>();</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        cout &lt;&lt; <span class="stringliteral">&quot;Давление воздуха: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_wind_instrument.html#a720dce928ec63face1bf2d1f03c1f450">airPressure</a> &lt;&lt; endl;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    }</div>
+</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="class_wind_instrument.html#a4b86a624fc7ca5d54fd61446e4d135e2">  252</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_wind_instrument.html#a4b86a624fc7ca5d54fd61446e4d135e2">setAirPressure</a>(<span class="keywordtype">double</span> pressure) { <a class="code hl_variable" href="class_wind_instrument.html#a720dce928ec63face1bf2d1f03c1f450">airPressure</a> = pressure; }</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="class_wind_instrument.html#a4441ac11445ff0b8fdf6cb509ff50d00">  254</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_wind_instrument.html#a4441ac11445ff0b8fdf6cb509ff50d00">setMaterial</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; mat) { <a class="code hl_variable" href="class_wind_instrument.html#a030df246dabc346792d54b461c8402e6">material</a> = mat; }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>};</div>
+</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span></div>
+<div class="foldopen" id="foldopen00260" data-start="{" data-end="};">
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="class_guitar.html">  260</a></span><span class="keyword">class </span><a class="code hl_function" href="class_guitar.html#a4bdf580f51fea4069a86a70d93f531b6">Guitar</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_string_instrument.html#ac920ad94577232f754806b8202c92ed8">StringInstrument</a> {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="class_guitar.html#a4bdf580f51fea4069a86a70d93f531b6">  270</a></span>    <a class="code hl_function" href="class_guitar.html#a4bdf580f51fea4069a86a70d93f531b6">Guitar</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, <span class="keywordtype">int</span> year) : <a class="code hl_function" href="class_string_instrument.html#ac920ad94577232f754806b8202c92ed8">StringInstrument</a>(<a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, year, 6, 1.0) {}</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    </div>
+<div class="foldopen" id="foldopen00275" data-start="{" data-end="}">
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno"><a class="line" href="class_guitar.html#ab90d36c47977957000715c884c483b6e">  275</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_guitar.html#ab90d36c47977957000715c884c483b6e">play</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <a class="code hl_function" href="class_musical_instrument.html#a228e61d21d052d0768085f09258bf051">incrementPlayCount</a>(<a class="code hl_function" href="class_guitar.html#a3474faf153c4f0e295ed48821d1b5554">getType</a>());</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        cout &lt;&lt; <span class="stringliteral">&quot;Guitar &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a> &lt;&lt; <span class="stringliteral">&quot; sound like: Strum Strum...&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    }</div>
+</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="class_guitar.html#a3474faf153c4f0e295ed48821d1b5554">  285</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_guitar.html#a3474faf153c4f0e295ed48821d1b5554">getType</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Guitar&quot;</span>; }</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span></div>
+<div class="foldopen" id="foldopen00290" data-start="{" data-end="}">
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno"><a class="line" href="class_guitar.html#a9182a28937466985b13bd9b6774075d4">  290</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_guitar.html#a9182a28937466985b13bd9b6774075d4">tune</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        <a class="code hl_function" href="class_string_instrument.html#ab3e144b73ed33ddf3ebb380d1188843b">StringInstrument::tune</a>();</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        cout &lt;&lt; <span class="stringliteral">&quot;The guitar is tuned in E-A-D-G-B-E&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    }</div>
+</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>};</div>
+</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span></div>
+<div class="foldopen" id="foldopen00299" data-start="{" data-end="};">
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno"><a class="line" href="class_violin.html">  299</a></span><span class="keyword">class </span><a class="code hl_function" href="class_violin.html#ac2f496d26f7b91c0d7aae5206ab7d618">Violin</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_string_instrument.html#ac920ad94577232f754806b8202c92ed8">StringInstrument</a> {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno"><a class="line" href="class_violin.html#ac2f496d26f7b91c0d7aae5206ab7d618">  309</a></span>    <a class="code hl_function" href="class_violin.html#ac2f496d26f7b91c0d7aae5206ab7d618">Violin</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, <span class="keywordtype">int</span> year) : <a class="code hl_function" href="class_string_instrument.html#ac920ad94577232f754806b8202c92ed8">StringInstrument</a>(<a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, year, 4, 8.0) {}</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span></div>
+<div class="foldopen" id="foldopen00315" data-start="{" data-end="}">
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno"><a class="line" href="class_violin.html#a3efb5da334e160a42e34d4798bde6ec3">  315</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_violin.html#a3efb5da334e160a42e34d4798bde6ec3">play</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <a class="code hl_function" href="class_musical_instrument.html#a228e61d21d052d0768085f09258bf051">incrementPlayCount</a>(<a class="code hl_function" href="class_violin.html#a101a5789f1ce94440e168c55b8f208bb">getType</a>());</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        cout &lt;&lt; <span class="stringliteral">&quot;Violin &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a> &lt;&lt; <span class="stringliteral">&quot; sound like: Strum Strum...&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    }</div>
+</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno"><a class="line" href="class_violin.html#a101a5789f1ce94440e168c55b8f208bb">  325</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_violin.html#a101a5789f1ce94440e168c55b8f208bb">getType</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Violin&quot;</span>; }</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>};</div>
+</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span></div>
+<div class="foldopen" id="foldopen00331" data-start="{" data-end="};">
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno"><a class="line" href="class_flute.html">  331</a></span><span class="keyword">class </span><a class="code hl_function" href="class_flute.html#aafe2b0417faebdef3c3d8cd14d96c7f6">Flute</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_wind_instrument.html#a42edaadbf674323e4ad7349a10761999">WindInstrument</a> {</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="class_flute.html#aafe2b0417faebdef3c3d8cd14d96c7f6">  339</a></span>    <a class="code hl_function" href="class_flute.html#aafe2b0417faebdef3c3d8cd14d96c7f6">Flute</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, <span class="keywordtype">int</span> year) : <a class="code hl_function" href="class_wind_instrument.html#a42edaadbf674323e4ad7349a10761999">WindInstrument</a>(<a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, year, <span class="stringliteral">&quot;Wood&quot;</span>) {}</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span></div>
+<div class="foldopen" id="foldopen00344" data-start="{" data-end="}">
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno"><a class="line" href="class_flute.html#aaa13cd53649e0d96773758c3d5d5475b">  344</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_flute.html#aaa13cd53649e0d96773758c3d5d5475b">play</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <a class="code hl_function" href="class_musical_instrument.html#a228e61d21d052d0768085f09258bf051">incrementPlayCount</a>(<a class="code hl_function" href="class_flute.html#a0e1eb6bb63f9d874e2ea2eb524d7bd11">getType</a>());</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        cout &lt;&lt; <span class="stringliteral">&quot;Flute &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a> &lt;&lt; <span class="stringliteral">&quot; sound like Toot Toot...&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    }</div>
+</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno"><a class="line" href="class_flute.html#a0e1eb6bb63f9d874e2ea2eb524d7bd11">  354</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_flute.html#a0e1eb6bb63f9d874e2ea2eb524d7bd11">getType</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Flute&quot;</span>; }</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>};</div>
+</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span></div>
+<div class="foldopen" id="foldopen00360" data-start="{" data-end="};">
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="class_i_electronic_device.html">  360</a></span><span class="keyword">class </span><a class="code hl_function" href="class_i_electronic_device.html#a3d918094370e6912381de67c93abc561">IElectronicDevice</a> {</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="class_i_electronic_device.html#af4ff3981e184ca7306782b2d9e68480a">  362</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_i_electronic_device.html#af4ff3981e184ca7306782b2d9e68480a">powerOn</a>;</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno"><a class="line" href="class_i_electronic_device.html#a0f7065b645f2d3f27fa8b50ebc41badd">  363</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_i_electronic_device.html#a0f7065b645f2d3f27fa8b50ebc41badd">currentPatch</a>;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno"><a class="line" href="class_i_electronic_device.html#a3d918094370e6912381de67c93abc561">  370</a></span>    <a class="code hl_function" href="class_i_electronic_device.html#a3d918094370e6912381de67c93abc561">IElectronicDevice</a>() : <a class="code hl_variable" href="class_i_electronic_device.html#af4ff3981e184ca7306782b2d9e68480a">powerOn</a>(false), <a class="code hl_variable" href="class_i_electronic_device.html#a0f7065b645f2d3f27fa8b50ebc41badd">currentPatch</a>(0) {}</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span></div>
+<div class="foldopen" id="foldopen00376" data-start="{" data-end="}">
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno"><a class="line" href="class_i_electronic_device.html#a597ff1fb7e4bd95aa6fc3df8af5a4e99">  376</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_electronic_device.html#a597ff1fb7e4bd95aa6fc3df8af5a4e99">powerOnDevice</a>() {</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        <a class="code hl_variable" href="class_i_electronic_device.html#af4ff3981e184ca7306782b2d9e68480a">powerOn</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>        cout &lt;&lt; <span class="stringliteral">&quot;Device is turned on&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    }</div>
+</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span></div>
+<div class="foldopen" id="foldopen00385" data-start="{" data-end="}">
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno"><a class="line" href="class_i_electronic_device.html#aee6ecef88006ed367402424a080c7263">  385</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_electronic_device.html#aee6ecef88006ed367402424a080c7263">setPatch</a>(<span class="keywordtype">int</span> patch) {</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <a class="code hl_variable" href="class_i_electronic_device.html#a0f7065b645f2d3f27fa8b50ebc41badd">currentPatch</a> = patch;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        cout &lt;&lt; <span class="stringliteral">&quot;Patch #&quot;</span> &lt;&lt; patch &lt;&lt; <span class="stringliteral">&quot; set&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    }</div>
+</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="class_i_electronic_device.html#a26dda7d95ba215d6e1a5d72d44e36f3b">  394</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_electronic_device.html#a26dda7d95ba215d6e1a5d72d44e36f3b">isPoweredOn</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_i_electronic_device.html#af4ff3981e184ca7306782b2d9e68480a">powerOn</a>; }</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>};</div>
+</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span></div>
+<div class="foldopen" id="foldopen00400" data-start="{" data-end="};">
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno"><a class="line" href="class_synth_guitar.html">  400</a></span><span class="keyword">class </span><a class="code hl_function" href="class_synth_guitar.html#a2c7a83c8dd73886aafc33b4dee716f06">SynthGuitar</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_guitar.html#a4bdf580f51fea4069a86a70d93f531b6">Guitar</a>, <span class="keyword">public</span> <a class="code hl_function" href="class_i_electronic_device.html#a3d918094370e6912381de67c93abc561">IElectronicDevice</a> {</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span></div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno"><a class="line" href="class_synth_guitar.html#a2c7a83c8dd73886aafc33b4dee716f06">  408</a></span>    <a class="code hl_function" href="class_synth_guitar.html#a2c7a83c8dd73886aafc33b4dee716f06">SynthGuitar</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, <span class="keywordtype">int</span> year) : <a class="code hl_function" href="class_guitar.html#a4bdf580f51fea4069a86a70d93f531b6">Guitar</a>(<a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a>, year) {}</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span></div>
+<div class="foldopen" id="foldopen00416" data-start="{" data-end="}">
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno"><a class="line" href="class_synth_guitar.html#ae68b16d5e912ec9c343e0d5972777e0b">  416</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_synth_guitar.html#ae68b16d5e912ec9c343e0d5972777e0b">play</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>        <a class="code hl_function" href="class_musical_instrument.html#a228e61d21d052d0768085f09258bf051">incrementPlayCount</a>(<a class="code hl_function" href="class_synth_guitar.html#ae1682c8c5fa0a5089aa2d75decad2cf2">getType</a>());</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_i_electronic_device.html#af4ff3981e184ca7306782b2d9e68480a">powerOn</a>) {</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            cout &lt;&lt; <span class="stringliteral">&quot;SynthGuitar &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">name</a> &lt;&lt; <span class="stringliteral">&quot; (patch #&quot;</span> &lt;&lt; <a class="code hl_variable" href="class_i_electronic_device.html#a0f7065b645f2d3f27fa8b50ebc41badd">currentPatch</a> &lt;&lt; <span class="stringliteral">&quot;): Electronic sound...&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        }</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>            cout &lt;&lt; <span class="stringliteral">&quot;The synth guitar is turned off!&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        }</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>    }</div>
+</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno"><a class="line" href="class_synth_guitar.html#ae1682c8c5fa0a5089aa2d75decad2cf2">  430</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_synth_guitar.html#ae1682c8c5fa0a5089aa2d75decad2cf2">getType</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;SynthGuitar&quot;</span>; }</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span></div>
+<div class="foldopen" id="foldopen00437" data-start="{" data-end="}">
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno"><a class="line" href="class_synth_guitar.html#ac99fef5838f143a5efdc626dc93f7419">  437</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_synth_guitar.html#ac99fef5838f143a5efdc626dc93f7419">tune</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_i_electronic_device.html#af4ff3981e184ca7306782b2d9e68480a">powerOn</a>) {</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>            <a class="code hl_function" href="class_guitar.html#a9182a28937466985b13bd9b6774075d4">Guitar::tune</a>();</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>            cout &lt;&lt; <span class="stringliteral">&quot;Synth guitar calibration is complete.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>        }</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>            cout &lt;&lt; <span class="stringliteral">&quot;Turn on the power to configure&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>        }</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>    }</div>
+</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>};</div>
+</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span> </div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span><span class="preprocessor">#endif </span><span class="comment">// LAB_3_H</span></div>
+<div class="ttc" id="aclass_flute_html_a0e1eb6bb63f9d874e2ea2eb524d7bd11"><div class="ttname"><a href="class_flute.html#a0e1eb6bb63f9d874e2ea2eb524d7bd11">Flute::getType</a></div><div class="ttdeci">string getType() const override</div><div class="ttdoc">Получить тип инструмента</div><div class="ttdef"><b>Определения</b> lab3.h:354</div></div>
+<div class="ttc" id="aclass_flute_html_aaa13cd53649e0d96773758c3d5d5475b"><div class="ttname"><a href="class_flute.html#aaa13cd53649e0d96773758c3d5d5475b">Flute::play</a></div><div class="ttdeci">void play() override</div><div class="ttdoc">Воспроизведение звука скрипки</div><div class="ttdef"><b>Определения</b> lab3.h:344</div></div>
+<div class="ttc" id="aclass_flute_html_aafe2b0417faebdef3c3d8cd14d96c7f6"><div class="ttname"><a href="class_flute.html#aafe2b0417faebdef3c3d8cd14d96c7f6">Flute::Flute</a></div><div class="ttdeci">Flute(const string &amp;name, int year)</div><div class="ttdoc">Конструктор флейты</div><div class="ttdef"><b>Определения</b> lab3.h:339</div></div>
+<div class="ttc" id="aclass_guitar_html_a3474faf153c4f0e295ed48821d1b5554"><div class="ttname"><a href="class_guitar.html#a3474faf153c4f0e295ed48821d1b5554">Guitar::getType</a></div><div class="ttdeci">string getType() const override</div><div class="ttdoc">Получить тип инструмента</div><div class="ttdef"><b>Определения</b> lab3.h:285</div></div>
+<div class="ttc" id="aclass_guitar_html_a4bdf580f51fea4069a86a70d93f531b6"><div class="ttname"><a href="class_guitar.html#a4bdf580f51fea4069a86a70d93f531b6">Guitar::Guitar</a></div><div class="ttdeci">Guitar(const string &amp;name, int year)</div><div class="ttdoc">Конструктор гитары</div><div class="ttdef"><b>Определения</b> lab3.h:270</div></div>
+<div class="ttc" id="aclass_guitar_html_a9182a28937466985b13bd9b6774075d4"><div class="ttname"><a href="class_guitar.html#a9182a28937466985b13bd9b6774075d4">Guitar::tune</a></div><div class="ttdeci">void tune() override</div><div class="ttdoc">Настройка гитары</div><div class="ttdef"><b>Определения</b> lab3.h:290</div></div>
+<div class="ttc" id="aclass_guitar_html_ab90d36c47977957000715c884c483b6e"><div class="ttname"><a href="class_guitar.html#ab90d36c47977957000715c884c483b6e">Guitar::play</a></div><div class="ttdeci">void play() override</div><div class="ttdoc">Воспроизведение звука гитары</div><div class="ttdef"><b>Определения</b> lab3.h:275</div></div>
+<div class="ttc" id="aclass_i_electronic_device_html_a0f7065b645f2d3f27fa8b50ebc41badd"><div class="ttname"><a href="class_i_electronic_device.html#a0f7065b645f2d3f27fa8b50ebc41badd">IElectronicDevice::currentPatch</a></div><div class="ttdeci">int currentPatch</div><div class="ttdef"><b>Определения</b> lab3.h:363</div></div>
+<div class="ttc" id="aclass_i_electronic_device_html_a26dda7d95ba215d6e1a5d72d44e36f3b"><div class="ttname"><a href="class_i_electronic_device.html#a26dda7d95ba215d6e1a5d72d44e36f3b">IElectronicDevice::isPoweredOn</a></div><div class="ttdeci">bool isPoweredOn() const</div><div class="ttdoc">Проверить, включено ли устройство</div><div class="ttdef"><b>Определения</b> lab3.h:394</div></div>
+<div class="ttc" id="aclass_i_electronic_device_html_a3d918094370e6912381de67c93abc561"><div class="ttname"><a href="class_i_electronic_device.html#a3d918094370e6912381de67c93abc561">IElectronicDevice::IElectronicDevice</a></div><div class="ttdeci">IElectronicDevice()</div><div class="ttdoc">Конструктор по умолчанию</div><div class="ttdef"><b>Определения</b> lab3.h:370</div></div>
+<div class="ttc" id="aclass_i_electronic_device_html_a597ff1fb7e4bd95aa6fc3df8af5a4e99"><div class="ttname"><a href="class_i_electronic_device.html#a597ff1fb7e4bd95aa6fc3df8af5a4e99">IElectronicDevice::powerOnDevice</a></div><div class="ttdeci">void powerOnDevice()</div><div class="ttdoc">Включить устройство</div><div class="ttdef"><b>Определения</b> lab3.h:376</div></div>
+<div class="ttc" id="aclass_i_electronic_device_html_aee6ecef88006ed367402424a080c7263"><div class="ttname"><a href="class_i_electronic_device.html#aee6ecef88006ed367402424a080c7263">IElectronicDevice::setPatch</a></div><div class="ttdeci">void setPatch(int patch)</div><div class="ttdoc">Установить патч (пресет).</div><div class="ttdef"><b>Определения</b> lab3.h:385</div></div>
+<div class="ttc" id="aclass_i_electronic_device_html_af4ff3981e184ca7306782b2d9e68480a"><div class="ttname"><a href="class_i_electronic_device.html#af4ff3981e184ca7306782b2d9e68480a">IElectronicDevice::powerOn</a></div><div class="ttdeci">bool powerOn</div><div class="ttdef"><b>Определения</b> lab3.h:362</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_a038403bf2445ca8e64bd9b27bb45b482"><div class="ttname"><a href="class_musical_instrument.html#a038403bf2445ca8e64bd9b27bb45b482">MusicalInstrument::operator=</a></div><div class="ttdeci">MusicalInstrument &amp; operator=(const MusicalInstrument &amp;other)</div><div class="ttdoc">Перегрузка оператора присваивания.</div><div class="ttdef"><b>Определения</b> lab3.h:73</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_a04b449d3491c28d36aff19a0e87b4add"><div class="ttname"><a href="class_musical_instrument.html#a04b449d3491c28d36aff19a0e87b4add">MusicalInstrument::getTotalInstruments</a></div><div class="ttdeci">static int getTotalInstruments()</div><div class="ttdoc">Получить общее количество созданных инструментов.</div><div class="ttdef"><b>Определения</b> lab3.h:107</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_a05fc2dfcc99193948118dd770b78ef0f"><div class="ttname"><a href="class_musical_instrument.html#a05fc2dfcc99193948118dd770b78ef0f">MusicalInstrument::getYearMade</a></div><div class="ttdeci">int getYearMade() const</div><div class="ttdoc">Получить год изготовления</div><div class="ttdef"><b>Определения</b> lab3.h:140</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_a228e61d21d052d0768085f09258bf051"><div class="ttname"><a href="class_musical_instrument.html#a228e61d21d052d0768085f09258bf051">MusicalInstrument::incrementPlayCount</a></div><div class="ttdeci">void incrementPlayCount(const string &amp;type) const</div><div class="ttdoc">Увеличить счётчик воспроизведений для типа инструмента</div><div class="ttdef"><b>Определения</b> lab3.h:37</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_a32494b2e2eb6f2b1bef7bde6acc61604"><div class="ttname"><a href="class_musical_instrument.html#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument::MusicalInstrument</a></div><div class="ttdeci">MusicalInstrument(const string &amp;name, int year)</div><div class="ttdoc">Конструктор c параметрами.</div><div class="ttdef"><b>Определения</b> lab3.h:47</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_a329acd1693e8869d60ad9f77da6744ef"><div class="ttname"><a href="class_musical_instrument.html#a329acd1693e8869d60ad9f77da6744ef">MusicalInstrument::getName</a></div><div class="ttdeci">string getName() const</div><div class="ttdoc">Получить название инструмента.</div><div class="ttdef"><b>Определения</b> lab3.h:134</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_a39ae77f6e4fc48dfe1863c5d2d928cb9"><div class="ttname"><a href="class_musical_instrument.html#a39ae77f6e4fc48dfe1863c5d2d928cb9">MusicalInstrument::playCountByType</a></div><div class="ttdeci">static map&lt; string, int &gt; playCountByType</div><div class="ttdef"><b>Определения</b> lab3.h:31</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_a65989e852e5f8139e9412c32905bc828"><div class="ttname"><a href="class_musical_instrument.html#a65989e852e5f8139e9412c32905bc828">MusicalInstrument::play</a></div><div class="ttdeci">virtual void play()=0</div><div class="ttdoc">Чисто виртуальная функция воспроизведение звука.</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_a98320f5601845aae46e87c3ffdea3466"><div class="ttname"><a href="class_musical_instrument.html#a98320f5601845aae46e87c3ffdea3466">MusicalInstrument::tune</a></div><div class="ttdeci">virtual void tune()</div><div class="ttdoc">Виртуальная функция настройки инструмента.</div><div class="ttdef"><b>Определения</b> lab3.h:91</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_a99b6b39f754308848014e62dbc705141"><div class="ttname"><a href="class_musical_instrument.html#a99b6b39f754308848014e62dbc705141">MusicalInstrument::yearMade</a></div><div class="ttdeci">int yearMade</div><div class="ttdef"><b>Определения</b> lab3.h:29</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_aa861f8f998468ff03670d342e56477e4"><div class="ttname"><a href="class_musical_instrument.html#aa861f8f998468ff03670d342e56477e4">MusicalInstrument::~MusicalInstrument</a></div><div class="ttdeci">virtual ~MusicalInstrument()</div><div class="ttdoc">Деструктор.</div><div class="ttdef"><b>Определения</b> lab3.h:63</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_ac5cbe4068773ac217fd75225b0d8fa6f"><div class="ttname"><a href="class_musical_instrument.html#ac5cbe4068773ac217fd75225b0d8fa6f">MusicalInstrument::getMostPlayedType</a></div><div class="ttdeci">static string getMostPlayedType()</div><div class="ttdoc">Получить самый популярный тип инструмента</div><div class="ttdef"><b>Определения</b> lab3.h:115</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_ac8f92510733f3adcc19594b4e3b1a567"><div class="ttname"><a href="class_musical_instrument.html#ac8f92510733f3adcc19594b4e3b1a567">MusicalInstrument::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Определения</b> lab3.h:28</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_ace94ff57f651030ee16c714917c933af"><div class="ttname"><a href="class_musical_instrument.html#ace94ff57f651030ee16c714917c933af">MusicalInstrument::totalInstruments</a></div><div class="ttdeci">static int totalInstruments</div><div class="ttdef"><b>Определения</b> lab3.h:30</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_ae11a00e958df8e0b1dde58a2a217216c"><div class="ttname"><a href="class_musical_instrument.html#ae11a00e958df8e0b1dde58a2a217216c">MusicalInstrument::getType</a></div><div class="ttdeci">virtual string getType() const =0</div><div class="ttdoc">Чисто виртуальная функция получения типа инструмента.</div></div>
+<div class="ttc" id="aclass_musical_instrument_html_af8efbdce465077856ea4ba69f7084aad"><div class="ttname"><a href="class_musical_instrument.html#af8efbdce465077856ea4ba69f7084aad">MusicalInstrument::MusicalInstrument</a></div><div class="ttdeci">MusicalInstrument(const MusicalInstrument &amp;other)</div><div class="ttdoc">Конструктор копирования.</div><div class="ttdef"><b>Определения</b> lab3.h:56</div></div>
+<div class="ttc" id="aclass_string_instrument_html_a2768a3d65b1e291459f73146ded8534c"><div class="ttname"><a href="class_string_instrument.html#a2768a3d65b1e291459f73146ded8534c">StringInstrument::getNumberOfStrings</a></div><div class="ttdeci">int getNumberOfStrings() const</div><div class="ttdoc">Получить количество струн</div><div class="ttdef"><b>Определения</b> lab3.h:206</div></div>
+<div class="ttc" id="aclass_string_instrument_html_a2d96e2b7ad6c439e60da9d865fda73cb"><div class="ttname"><a href="class_string_instrument.html#a2d96e2b7ad6c439e60da9d865fda73cb">StringInstrument::getTension</a></div><div class="ttdeci">double getTension() const</div><div class="ttdoc">Получить натяжение струн</div><div class="ttdef"><b>Определения</b> lab3.h:212</div></div>
+<div class="ttc" id="aclass_string_instrument_html_a352bab0c7dee3b0662590b7fcf4b4fb8"><div class="ttname"><a href="class_string_instrument.html#a352bab0c7dee3b0662590b7fcf4b4fb8">StringInstrument::stringMaterials</a></div><div class="ttdeci">string * stringMaterials</div><div class="ttdef"><b>Определения</b> lab3.h:153</div></div>
+<div class="ttc" id="aclass_string_instrument_html_a9e80a344425daf5ea9f4580cfb206b3d"><div class="ttname"><a href="class_string_instrument.html#a9e80a344425daf5ea9f4580cfb206b3d">StringInstrument::tension</a></div><div class="ttdeci">double tension</div><div class="ttdef"><b>Определения</b> lab3.h:152</div></div>
+<div class="ttc" id="aclass_string_instrument_html_ab3e144b73ed33ddf3ebb380d1188843b"><div class="ttname"><a href="class_string_instrument.html#ab3e144b73ed33ddf3ebb380d1188843b">StringInstrument::tune</a></div><div class="ttdeci">void tune() override</div><div class="ttdoc">Переопределённая функция настройки струнного инструмента.</div><div class="ttdef"><b>Определения</b> lab3.h:196</div></div>
+<div class="ttc" id="aclass_string_instrument_html_ab88cd33f8e9ac6bc0d83161a7138c641"><div class="ttname"><a href="class_string_instrument.html#ab88cd33f8e9ac6bc0d83161a7138c641">StringInstrument::~StringInstrument</a></div><div class="ttdeci">virtual ~StringInstrument()</div><div class="ttdoc">Виртуальный деструктор</div><div class="ttdef"><b>Определения</b> lab3.h:188</div></div>
+<div class="ttc" id="aclass_string_instrument_html_ac6be3eab7cbd90934e9da808e86df53b"><div class="ttname"><a href="class_string_instrument.html#ac6be3eab7cbd90934e9da808e86df53b">StringInstrument::StringInstrument</a></div><div class="ttdeci">StringInstrument(const StringInstrument &amp;other)</div><div class="ttdoc">Конструктор копирования с глубоким копированием</div><div class="ttdef"><b>Определения</b> lab3.h:176</div></div>
+<div class="ttc" id="aclass_string_instrument_html_ac920ad94577232f754806b8202c92ed8"><div class="ttname"><a href="class_string_instrument.html#ac920ad94577232f754806b8202c92ed8">StringInstrument::StringInstrument</a></div><div class="ttdeci">StringInstrument(const string &amp;name, int year, int strings, double tension)</div><div class="ttdoc">Конструктор с параметрами</div><div class="ttdef"><b>Определения</b> lab3.h:163</div></div>
+<div class="ttc" id="aclass_string_instrument_html_aca3a7966265f313755d50e9d95c4995c"><div class="ttname"><a href="class_string_instrument.html#aca3a7966265f313755d50e9d95c4995c">StringInstrument::setTension</a></div><div class="ttdeci">void setTension(double t)</div><div class="ttdoc">Установить натяжение струн</div><div class="ttdef"><b>Определения</b> lab3.h:218</div></div>
+<div class="ttc" id="aclass_string_instrument_html_ae3d3d6ffeef95fdf3c452a8303a94f05"><div class="ttname"><a href="class_string_instrument.html#ae3d3d6ffeef95fdf3c452a8303a94f05">StringInstrument::numberOfStrings</a></div><div class="ttdeci">int numberOfStrings</div><div class="ttdef"><b>Определения</b> lab3.h:151</div></div>
+<div class="ttc" id="aclass_synth_guitar_html_a2c7a83c8dd73886aafc33b4dee716f06"><div class="ttname"><a href="class_synth_guitar.html#a2c7a83c8dd73886aafc33b4dee716f06">SynthGuitar::SynthGuitar</a></div><div class="ttdeci">SynthGuitar(const string &amp;name, int year)</div><div class="ttdoc">Конструктор синтезаторной гитары</div><div class="ttdef"><b>Определения</b> lab3.h:408</div></div>
+<div class="ttc" id="aclass_synth_guitar_html_ac99fef5838f143a5efdc626dc93f7419"><div class="ttname"><a href="class_synth_guitar.html#ac99fef5838f143a5efdc626dc93f7419">SynthGuitar::tune</a></div><div class="ttdeci">void tune() override</div><div class="ttdoc">Настройка синтезаторной гитары</div><div class="ttdef"><b>Определения</b> lab3.h:437</div></div>
+<div class="ttc" id="aclass_synth_guitar_html_ae1682c8c5fa0a5089aa2d75decad2cf2"><div class="ttname"><a href="class_synth_guitar.html#ae1682c8c5fa0a5089aa2d75decad2cf2">SynthGuitar::getType</a></div><div class="ttdeci">string getType() const override</div><div class="ttdoc">Получить тип инструмента</div><div class="ttdef"><b>Определения</b> lab3.h:430</div></div>
+<div class="ttc" id="aclass_synth_guitar_html_ae68b16d5e912ec9c343e0d5972777e0b"><div class="ttname"><a href="class_synth_guitar.html#ae68b16d5e912ec9c343e0d5972777e0b">SynthGuitar::play</a></div><div class="ttdeci">void play() override</div><div class="ttdoc">Воспроизведение звука синтезаторной гитары</div><div class="ttdef"><b>Определения</b> lab3.h:416</div></div>
+<div class="ttc" id="aclass_violin_html_a101a5789f1ce94440e168c55b8f208bb"><div class="ttname"><a href="class_violin.html#a101a5789f1ce94440e168c55b8f208bb">Violin::getType</a></div><div class="ttdeci">string getType() const override</div><div class="ttdoc">Получить тип инструмента</div><div class="ttdef"><b>Определения</b> lab3.h:325</div></div>
+<div class="ttc" id="aclass_violin_html_a3efb5da334e160a42e34d4798bde6ec3"><div class="ttname"><a href="class_violin.html#a3efb5da334e160a42e34d4798bde6ec3">Violin::play</a></div><div class="ttdeci">void play() override</div><div class="ttdoc">Воспроизведение звука скрипки</div><div class="ttdef"><b>Определения</b> lab3.h:315</div></div>
+<div class="ttc" id="aclass_violin_html_ac2f496d26f7b91c0d7aae5206ab7d618"><div class="ttname"><a href="class_violin.html#ac2f496d26f7b91c0d7aae5206ab7d618">Violin::Violin</a></div><div class="ttdeci">Violin(const string &amp;name, int year)</div><div class="ttdoc">Конструктор скрипки</div><div class="ttdef"><b>Определения</b> lab3.h:309</div></div>
+<div class="ttc" id="aclass_wind_instrument_html_a030df246dabc346792d54b461c8402e6"><div class="ttname"><a href="class_wind_instrument.html#a030df246dabc346792d54b461c8402e6">WindInstrument::material</a></div><div class="ttdeci">string material</div><div class="ttdef"><b>Определения</b> lab3.h:226</div></div>
+<div class="ttc" id="aclass_wind_instrument_html_a42edaadbf674323e4ad7349a10761999"><div class="ttname"><a href="class_wind_instrument.html#a42edaadbf674323e4ad7349a10761999">WindInstrument::WindInstrument</a></div><div class="ttdeci">WindInstrument(const string &amp;name, int year, const string &amp;material)</div><div class="ttdoc">Конструктор с параметрами</div><div class="ttdef"><b>Определения</b> lab3.h:236</div></div>
+<div class="ttc" id="aclass_wind_instrument_html_a4441ac11445ff0b8fdf6cb509ff50d00"><div class="ttname"><a href="class_wind_instrument.html#a4441ac11445ff0b8fdf6cb509ff50d00">WindInstrument::setMaterial</a></div><div class="ttdeci">void setMaterial(const string &amp;mat)</div><div class="ttdef"><b>Определения</b> lab3.h:254</div></div>
+<div class="ttc" id="aclass_wind_instrument_html_a4b86a624fc7ca5d54fd61446e4d135e2"><div class="ttname"><a href="class_wind_instrument.html#a4b86a624fc7ca5d54fd61446e4d135e2">WindInstrument::setAirPressure</a></div><div class="ttdeci">void setAirPressure(double pressure)</div><div class="ttdoc">Установить давление воздуха</div><div class="ttdef"><b>Определения</b> lab3.h:252</div></div>
+<div class="ttc" id="aclass_wind_instrument_html_a720dce928ec63face1bf2d1f03c1f450"><div class="ttname"><a href="class_wind_instrument.html#a720dce928ec63face1bf2d1f03c1f450">WindInstrument::airPressure</a></div><div class="ttdeci">double airPressure</div><div class="ttdef"><b>Определения</b> lab3.h:227</div></div>
+<div class="ttc" id="aclass_wind_instrument_html_a79e3855a4ae81e784398ae5dbd575447"><div class="ttname"><a href="class_wind_instrument.html#a79e3855a4ae81e784398ae5dbd575447">WindInstrument::tune</a></div><div class="ttdeci">void tune() override</div><div class="ttdoc">Переопределённая функция tune() для настройки духового инструмента</div><div class="ttdef"><b>Определения</b> lab3.h:243</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_da92606663f4ecb03aa66c183f15dac3.html">repos</a></li><li class="navelem"><a href="dir_2b9866e0fbfbf80959f5698e4a477162.html">lab3</a></li><li class="navelem"><a href="dir_fcef73b1e6812e74ae14c80031a9d2ef.html">lab3</a></li><li class="navelem"><a href="lab3_8h.html">lab3.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>
