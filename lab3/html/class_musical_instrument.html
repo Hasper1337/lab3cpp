@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторная работа №3 ООП: Класс MusicalInstrument</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Лабораторная работа №3 ООП
+   </div>
+   <div id="projectbrief">Наследование</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_musical_instrument.html','','class_musical_instrument-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс MusicalInstrument<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Абстрактный базовый класс, c методам play, tune и getType.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="lab3_8h_source.html">lab3.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:MusicalInstrument:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_musical_instrument.png" usemap="#MusicalInstrument_map" alt=""/>
+  <map id="MusicalInstrument_map" name="MusicalInstrument_map">
+<area href="class_string_instrument.html" title="Промежуточный класс для струнных инструментов, класс наследник от MusicalInstrument,..." alt="StringInstrument" shape="rect" coords="61,56,174,80"/>
+<area href="class_wind_instrument.html" title="Промежуточный класс для духовых инструментов, класс наследник от MusicalInstrument." alt="WindInstrument" shape="rect" coords="246,56,359,80"/>
+<area href="class_guitar.html" title="Класс наследник от StringInstrument." alt="Guitar" shape="rect" coords="0,112,113,136"/>
+<area href="class_violin.html" title="Класс наследник от StringInstrument." alt="Violin" shape="rect" coords="123,112,236,136"/>
+<area href="class_flute.html" title="Класс наследник от WindInstrument." alt="Flute" shape="rect" coords="246,112,359,136"/>
+<area href="class_synth_guitar.html" title="Класс наследник от Guitar и IElectronicDevice." alt="SynthGuitar" shape="rect" coords="0,168,113,192"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a32494b2e2eb6f2b1bef7bde6acc61604" id="r_a32494b2e2eb6f2b1bef7bde6acc61604"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32494b2e2eb6f2b1bef7bde6acc61604">MusicalInstrument</a> (const string &amp;<a class="el" href="#ac8f92510733f3adcc19594b4e3b1a567">name</a>, int year)</td></tr>
+<tr class="memdesc:a32494b2e2eb6f2b1bef7bde6acc61604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор c параметрами.  <br /></td></tr>
+<tr class="memitem:af8efbdce465077856ea4ba69f7084aad" id="r_af8efbdce465077856ea4ba69f7084aad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8efbdce465077856ea4ba69f7084aad">MusicalInstrument</a> (const <a class="el" href="class_musical_instrument.html">MusicalInstrument</a> &amp;other)</td></tr>
+<tr class="memdesc:af8efbdce465077856ea4ba69f7084aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор копирования.  <br /></td></tr>
+<tr class="memitem:aa861f8f998468ff03670d342e56477e4" id="r_aa861f8f998468ff03670d342e56477e4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa861f8f998468ff03670d342e56477e4">~MusicalInstrument</a> ()</td></tr>
+<tr class="memdesc:aa861f8f998468ff03670d342e56477e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор.  <br /></td></tr>
+<tr class="memitem:a038403bf2445ca8e64bd9b27bb45b482" id="r_a038403bf2445ca8e64bd9b27bb45b482"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_musical_instrument.html">MusicalInstrument</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a038403bf2445ca8e64bd9b27bb45b482">operator=</a> (const <a class="el" href="class_musical_instrument.html">MusicalInstrument</a> &amp;other)</td></tr>
+<tr class="memdesc:a038403bf2445ca8e64bd9b27bb45b482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора присваивания.  <br /></td></tr>
+<tr class="memitem:a65989e852e5f8139e9412c32905bc828" id="r_a65989e852e5f8139e9412c32905bc828"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65989e852e5f8139e9412c32905bc828">play</a> ()=0</td></tr>
+<tr class="memdesc:a65989e852e5f8139e9412c32905bc828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Чисто виртуальная функция воспроизведение звука.  <br /></td></tr>
+<tr class="memitem:a98320f5601845aae46e87c3ffdea3466" id="r_a98320f5601845aae46e87c3ffdea3466"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98320f5601845aae46e87c3ffdea3466">tune</a> ()</td></tr>
+<tr class="memdesc:a98320f5601845aae46e87c3ffdea3466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виртуальная функция настройки инструмента.  <br /></td></tr>
+<tr class="memitem:ae11a00e958df8e0b1dde58a2a217216c" id="r_ae11a00e958df8e0b1dde58a2a217216c"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae11a00e958df8e0b1dde58a2a217216c">getType</a> () const =0</td></tr>
+<tr class="memdesc:ae11a00e958df8e0b1dde58a2a217216c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Чисто виртуальная функция получения типа инструмента.  <br /></td></tr>
+<tr class="memitem:a329acd1693e8869d60ad9f77da6744ef" id="r_a329acd1693e8869d60ad9f77da6744ef"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a329acd1693e8869d60ad9f77da6744ef">getName</a> () const</td></tr>
+<tr class="memdesc:a329acd1693e8869d60ad9f77da6744ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить название инструмента.  <br /></td></tr>
+<tr class="memitem:a05fc2dfcc99193948118dd770b78ef0f" id="r_a05fc2dfcc99193948118dd770b78ef0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05fc2dfcc99193948118dd770b78ef0f">getYearMade</a> () const</td></tr>
+<tr class="memdesc:a05fc2dfcc99193948118dd770b78ef0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить год изготовления  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a04b449d3491c28d36aff19a0e87b4add" id="r_a04b449d3491c28d36aff19a0e87b4add"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04b449d3491c28d36aff19a0e87b4add">getTotalInstruments</a> ()</td></tr>
+<tr class="memdesc:a04b449d3491c28d36aff19a0e87b4add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить общее количество созданных инструментов.  <br /></td></tr>
+<tr class="memitem:ac5cbe4068773ac217fd75225b0d8fa6f" id="r_ac5cbe4068773ac217fd75225b0d8fa6f"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5cbe4068773ac217fd75225b0d8fa6f">getMostPlayedType</a> ()</td></tr>
+<tr class="memdesc:ac5cbe4068773ac217fd75225b0d8fa6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить самый популярный тип инструмента  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a228e61d21d052d0768085f09258bf051" id="r_a228e61d21d052d0768085f09258bf051"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a228e61d21d052d0768085f09258bf051">incrementPlayCount</a> (const string &amp;type) const</td></tr>
+<tr class="memdesc:a228e61d21d052d0768085f09258bf051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличить счётчик воспроизведений для типа инструмента  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:ac8f92510733f3adcc19594b4e3b1a567" id="r_ac8f92510733f3adcc19594b4e3b1a567"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8f92510733f3adcc19594b4e3b1a567">name</a></td></tr>
+<tr class="memitem:a99b6b39f754308848014e62dbc705141" id="r_a99b6b39f754308848014e62dbc705141"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99b6b39f754308848014e62dbc705141">yearMade</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-static-attribs" class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
+Статические защищенные данные</h2></td></tr>
+<tr class="memitem:ace94ff57f651030ee16c714917c933af" id="r_ace94ff57f651030ee16c714917c933af"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace94ff57f651030ee16c714917c933af">totalInstruments</a> = 0</td></tr>
+<tr class="memitem:a39ae77f6e4fc48dfe1863c5d2d928cb9" id="r_a39ae77f6e4fc48dfe1863c5d2d928cb9"><td class="memItemLeft" align="right" valign="top">static map&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39ae77f6e4fc48dfe1863c5d2d928cb9">playCountByType</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Абстрактный базовый класс, c методам play, tune и getType. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a32494b2e2eb6f2b1bef7bde6acc61604" name="a32494b2e2eb6f2b1bef7bde6acc61604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32494b2e2eb6f2b1bef7bde6acc61604">&#9670;&#160;</a></span>MusicalInstrument() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MusicalInstrument::MusicalInstrument </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>year</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор c параметрами. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Название инструмента </td></tr>
+    <tr><td class="paramname">year</td><td>Год создания инструмента </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af8efbdce465077856ea4ba69f7084aad" name="af8efbdce465077856ea4ba69f7084aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8efbdce465077856ea4ba69f7084aad">&#9670;&#160;</a></span>MusicalInstrument() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MusicalInstrument::MusicalInstrument </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_musical_instrument.html">MusicalInstrument</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор копирования. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Копируемый объект </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa861f8f998468ff03670d342e56477e4" name="aa861f8f998468ff03670d342e56477e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa861f8f998468ff03670d342e56477e4">&#9670;&#160;</a></span>~MusicalInstrument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual MusicalInstrument::~MusicalInstrument </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Деструктор. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ac5cbe4068773ac217fd75225b0d8fa6f" name="ac5cbe4068773ac217fd75225b0d8fa6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5cbe4068773ac217fd75225b0d8fa6f">&#9670;&#160;</a></span>getMostPlayedType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MusicalInstrument::getMostPlayedType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить самый популярный тип инструмента </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с типом инструмента и количеством воспроизведений </dd></dl>
+
+</div>
+</div>
+<a id="a329acd1693e8869d60ad9f77da6744ef" name="a329acd1693e8869d60ad9f77da6744ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329acd1693e8869d60ad9f77da6744ef">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MusicalInstrument::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить название инструмента. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Название инструмента </dd></dl>
+
+</div>
+</div>
+<a id="a04b449d3491c28d36aff19a0e87b4add" name="a04b449d3491c28d36aff19a0e87b4add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04b449d3491c28d36aff19a0e87b4add">&#9670;&#160;</a></span>getTotalInstruments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MusicalInstrument::getTotalInstruments </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить общее количество созданных инструментов. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество инструментов </dd></dl>
+
+</div>
+</div>
+<a id="ae11a00e958df8e0b1dde58a2a217216c" name="ae11a00e958df8e0b1dde58a2a217216c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae11a00e958df8e0b1dde58a2a217216c">&#9670;&#160;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string MusicalInstrument::getType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Чисто виртуальная функция получения типа инструмента. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с типом инструмента </dd></dl>
+
+<p>Замещается в <a class="el" href="class_flute.html#a0e1eb6bb63f9d874e2ea2eb524d7bd11">Flute</a>, <a class="el" href="class_guitar.html#a3474faf153c4f0e295ed48821d1b5554">Guitar</a>, <a class="el" href="class_synth_guitar.html#ae1682c8c5fa0a5089aa2d75decad2cf2">SynthGuitar</a> и <a class="el" href="class_violin.html#a101a5789f1ce94440e168c55b8f208bb">Violin</a>.</p>
+
+</div>
+</div>
+<a id="a05fc2dfcc99193948118dd770b78ef0f" name="a05fc2dfcc99193948118dd770b78ef0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05fc2dfcc99193948118dd770b78ef0f">&#9670;&#160;</a></span>getYearMade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MusicalInstrument::getYearMade </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить год изготовления </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Год изготовления </dd></dl>
+
+</div>
+</div>
+<a id="a228e61d21d052d0768085f09258bf051" name="a228e61d21d052d0768085f09258bf051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a228e61d21d052d0768085f09258bf051">&#9670;&#160;</a></span>incrementPlayCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MusicalInstrument::incrementPlayCount </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Увеличить счётчик воспроизведений для типа инструмента </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Тип инструмента </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a038403bf2445ca8e64bd9b27bb45b482" name="a038403bf2445ca8e64bd9b27bb45b482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038403bf2445ca8e64bd9b27bb45b482">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_musical_instrument.html">MusicalInstrument</a> &amp; MusicalInstrument::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_musical_instrument.html">MusicalInstrument</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора присваивания. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Объект для присваивания </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на текущий объект </dd></dl>
+
+</div>
+</div>
+<a id="a65989e852e5f8139e9412c32905bc828" name="a65989e852e5f8139e9412c32905bc828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65989e852e5f8139e9412c32905bc828">&#9670;&#160;</a></span>play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MusicalInstrument::play </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Чисто виртуальная функция воспроизведение звука. </p>
+
+<p>Замещается в <a class="el" href="class_flute.html#aaa13cd53649e0d96773758c3d5d5475b">Flute</a>, <a class="el" href="class_guitar.html#ab90d36c47977957000715c884c483b6e">Guitar</a>, <a class="el" href="class_synth_guitar.html#ae68b16d5e912ec9c343e0d5972777e0b">SynthGuitar</a> и <a class="el" href="class_violin.html#a3efb5da334e160a42e34d4798bde6ec3">Violin</a>.</p>
+
+</div>
+</div>
+<a id="a98320f5601845aae46e87c3ffdea3466" name="a98320f5601845aae46e87c3ffdea3466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98320f5601845aae46e87c3ffdea3466">&#9670;&#160;</a></span>tune()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MusicalInstrument::tune </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Виртуальная функция настройки инструмента. </p>
+
+<p>Переопределяется в <a class="el" href="class_guitar.html#a9182a28937466985b13bd9b6774075d4">Guitar</a>, <a class="el" href="class_string_instrument.html#ab3e144b73ed33ddf3ebb380d1188843b">StringInstrument</a>, <a class="el" href="class_synth_guitar.html#ac99fef5838f143a5efdc626dc93f7419">SynthGuitar</a> и <a class="el" href="class_wind_instrument.html#a79e3855a4ae81e784398ae5dbd575447">WindInstrument</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="ac8f92510733f3adcc19594b4e3b1a567" name="ac8f92510733f3adcc19594b4e3b1a567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f92510733f3adcc19594b4e3b1a567">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MusicalInstrument::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39ae77f6e4fc48dfe1863c5d2d928cb9" name="a39ae77f6e4fc48dfe1863c5d2d928cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39ae77f6e4fc48dfe1863c5d2d928cb9">&#9670;&#160;</a></span>playCountByType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt; string, int &gt; MusicalInstrument::playCountByType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace94ff57f651030ee16c714917c933af" name="ace94ff57f651030ee16c714917c933af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace94ff57f651030ee16c714917c933af">&#9670;&#160;</a></span>totalInstruments</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MusicalInstrument::totalInstruments = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99b6b39f754308848014e62dbc705141" name="a99b6b39f754308848014e62dbc705141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b6b39f754308848014e62dbc705141">&#9670;&#160;</a></span>yearMade</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MusicalInstrument::yearMade</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>source/repos/lab3/lab3/<a class="el" href="lab3_8h_source.html">lab3.h</a></li>
+<li>source/repos/lab3/lab3/<a class="el" href="tests_8cpp.html">tests.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_musical_instrument.html">MusicalInstrument</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

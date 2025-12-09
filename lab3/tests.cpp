@@ -12,12 +12,9 @@ int MusicalInstrument::totalInstruments = 0;
 map<string, int> MusicalInstrument::playCountByType;
 
 /**
- * \brief Тест 1: Создание объектов всех типов
- * 
- * Проверяет создание инструментов всех классов и работу
- * статического счётчика totalInstruments
+ * \brief Тест 1: Создание объектов всех типов Проверяет создание инструментов всех классов и работу статического счётчика totalInstruments
  */
-void test1() {
+static void test1() {
     cout << "TEST 1: Making Musical Instruments" << endl;
     
     Guitar guitar("Fender", 2020);
@@ -41,7 +38,7 @@ void test1() {
 
 
 /**
- * @brief Тест 2: Полиморфизм через указатели на базовый класс
+ * \brief Тест 2: Полиморфизм через указатели на базовый класс
  *
  * Демонстрирует полиморфный вызов метода play() через
  * указатели на базовый класс MusicalInstrument
